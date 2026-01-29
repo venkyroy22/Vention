@@ -44,6 +44,7 @@ app.options('*', cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json({ limit: '10mb' }));
 
 app.get('/health', (req, res) => res.json({ ok: true }));
+app.get('/', (req, res) => res.json({ message: 'Welcome to the Vention API' }));
 
 // Debug endpoint to manually create a test user (for development only)
 app.post('/api/debug/create-test-user', async (req, res) => {
