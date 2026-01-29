@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { User, UserStatus } from '../types';
 import { UsersAPI } from '../api';
-import { FriendsAPI } from '../api/friends.ts';
-import { useTheme } from '../context/ThemeContext';
+import { FriendsAPI } from '../api/friends';
+import { useTheme } from '../context/ThemeContext.tsx';
 
 interface UserWithRequest extends User {
   friendRequest?: {

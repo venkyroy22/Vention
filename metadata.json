@@ -1,9 +1,0 @@
-
-{
-  "name": "Vention - Unified Workspace",
-  "description": "A high-end productivity and real-time messaging platform combining chat, task management, notes, and creative tools in a beautiful glassmorphic interface.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
-}

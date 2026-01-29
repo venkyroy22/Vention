@@ -2,20 +2,20 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn, useUser, useClerk } from '@clerk/clerk-react';
-import { User, UserStatus, Message } from './types';
-import Sidebar from './components/Sidebar';
-import ChatPanel from './components/ChatPanel';
-import ProductivityPanel from './components/ProductivityPanel';
-import WorkspaceNotes from './components/WorkspaceNotes';
-import ShareModal from './components/ShareModal';
-import Profile from './components/Profile';
-import Auth from './components/Auth';
-import FindFriends from './components/FindFriends';
-import TestLogin from './components/TestLogin';
-import { AuthAPI, UsersAPI, MessagesAPI, setAuthToken } from './api';
+import { User, UserStatus, Message } from './types.ts';
+import Sidebar from './components/Sidebar.tsx';
+import ChatPanel from './components/ChatPanel.tsx';
+import ProductivityPanel from './components/ProductivityPanel.tsx';
+import WorkspaceNotes from './components/WorkspaceNotes.tsx';
+import ShareModal from './components/ShareModal.tsx';
+import Profile from './components/Profile.tsx';
+import Auth from './components/Auth.tsx';
+import FindFriends from './components/FindFriends.tsx';
+import TestLogin from './components/TestLogin.tsx';
+import { AuthAPI, UsersAPI, MessagesAPI, setAuthToken } from "./api";
 import { FriendsAPI } from './api/friends.ts';
-import { useTheme } from './context/ThemeContext';
-import ThemeToggle from './components/ThemeToggle';
+import { useTheme } from './context/ThemeContext.tsx';
+import ThemeToggle from './components/ThemeToggle.tsx';
 
 const AppContent: React.FC = () => {
   const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';

@@ -2,10 +2,11 @@ import http from 'http';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Server } from 'socket.io';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
@@ -16,7 +17,8 @@ import friendRoutes from './routes/friends.js';
 import clerkRoutes from './routes/clerk.js';
 import User from './models/User.js';
 
-dotenv.config();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, '..', '.env.local') });
 
 const app = express();
 const server = http.createServer(app);
